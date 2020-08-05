@@ -1,0 +1,65 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>The Life And Times</title>
+    <!--Google Fonts-->
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2&display=swap">
+    <!--Font Awesome-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="{% static 'css/custom.css' %}">
+</head>
+<body id="page-top">
+    <!-- Header -->
+    <section id="landing-view">
+        <div class="container-fluid landing-backdrop">
+            <div class="top-spacer"></div>
+            <h1 class='name'>Martin Crowley</h1>
+            <p class='title'>Full-Stack Software Developer</p>
+        </div>
+    </section>
+    <section>
+        <div class="container-fluid">
+            {% block content %}
+
+            {% endblock %}
+        </div>
+    </section>
+    <!-- Footer -->
+    <section id="footer">
+        <div class="container-fluid">
+            <div class="row footer-row">
+                <div class="d-none d-md-block col-md-4">
+                    <div class="footer_links footer_positioning">
+                        <a class="my-github-link social-links" href="https://github.com/Mcrowley93" target="_blank">&copy;Martin Crowley - 2020</a>
+                    </div>
+                </div>
+                <div class="col-12 offset-md-4 col-md-4">
+                    <div class="footer_links footer_positioning">
+                        <a href="https://github.com/Mcrowley93" target="_blank"><i class="fab fa-github social-links"></i></a>
+                        <a href="https://www.facebook.com/martin.k.s.crowley" target="_blank"><i class="fab fa-facebook-square social-links"></i></a>
+                        <a href="https://uk.linkedin.com/in/martinkscrowley?trk=people-guest_people_search-card" target="_blank"><i class="fab fa-linkedin social-links"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Bootstrap core JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Plugin JavaScript -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
+    <!-- Match Height JS -->
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
+
+    <!-- Custom JavaScript for this theme -->
+    <script src="{% static 'js/scrolling-nav.js%' %}"></script>
+    <script src="{% static 'js/main.js' %}"></script>
+</body>
+</html>
