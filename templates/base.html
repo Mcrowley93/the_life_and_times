@@ -8,42 +8,90 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>The Life And Times</title>
     <!--Google Fonts-->
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Exo+2&display=swap">
+    <link href="https://fonts.googleapis.com/css2?family=Exo+2&family=Indie+Flower&display=swap" rel="stylesheet">
     <!--Font Awesome-->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap.min.css">
     <link rel="stylesheet" href="{% static 'css/custom.css' %}">
 </head>
 <body id="page-top">
+    <!-- Navbar -->
+    <nav class="navbar smart-scroll" id="mainNav">
+        <button class="navbar-toggler collapsed" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="icon-bar top-bar"></span>
+            <span class="icon-bar middle-bar"></span>
+            <span class="icon-bar bottom-bar"></span>
+        </button>
+        <div class=" collapse navbar-collapse" id="navbarResponsive">
+            <ul class="navbar-nav ml-auto">
+                <br>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#">1</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#">2</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#">3</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#">4</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link js-scroll-trigger" href="#">5</a>
+                </li>
+            </ul>
+        </div>
+    </nav>
     <!-- Header -->
-    <section id="landing-view">
-        <div class="container-fluid landing-backdrop">
+    <section class="page-header">
+        <div class="container-fluid header-cover background-cover">
             <div class="top-spacer"></div>
-            <h1 class='name'>Martin Crowley</h1>
-            <p class='title'>Full-Stack Software Developer</p>
+            <div class="row">
+                <div class="col-12">
+                    <div class="row">
+                        <div class="col-12 offset-md-1 col-md-11">
+                            <br>
+                            <h1 class='name'>The Life and Times:</h1>
+                            <h2>Memoirs, Moments & Bootstrap Components</h2>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
-    <section>
-        <div class="container-fluid">
-            {% block content %}
+    <!-- Main -->
+    <section class="main-section">
+        <div class="container-fluid background-cover">
+            <div class="container">
+                <div class="row">
+                    <div class="col-12">
+                        {% block content %}
 
-            {% endblock %}
+                        {% endblock %}
+                    </div>
+                </div>
+            </div>
         </div>
     </section>
     <!-- Footer -->
-    <section id="footer">
+    <section class="fixed-bottom page-footer">
         <div class="container-fluid">
             <div class="row footer-row">
-                <div class="d-none d-md-block col-md-4">
-                    <div class="footer_links footer_positioning">
-                        <a class="my-github-link social-links" href="https://github.com/Mcrowley93" target="_blank">&copy;Martin Crowley - 2020</a>
-                    </div>
-                </div>
-                <div class="col-12 offset-md-4 col-md-4">
-                    <div class="footer_links footer_positioning">
-                        <a href="https://github.com/Mcrowley93" target="_blank"><i class="fab fa-github social-links"></i></a>
-                        <a href="https://www.facebook.com/martin.k.s.crowley" target="_blank"><i class="fab fa-facebook-square social-links"></i></a>
-                        <a href="https://uk.linkedin.com/in/martinkscrowley?trk=people-guest_people_search-card" target="_blank"><i class="fab fa-linkedin social-links"></i></a>
+                <div class="col-12">
+                    <div class="row">
+                        <div class="d-none d-md-block col-md-4">
+                            <div class="footer_links footer_positioning">
+                                <a class="my-github-link social-links" href="https://github.com/Mcrowley93" target="_blank">&copy;Martin Crowley - 2020</a>
+                            </div>
+                        </div>
+                        <div class="col-12 offset-md-4 col-md-4">
+                            <div class="footer_links footer_positioning">
+                                <a href="https://github.com/Mcrowley93" target="_blank"><i class="fab fa-github social-links"></i></a>
+                                <a href="https://www.facebook.com/martin.k.s.crowley" target="_blank"><i class="fab fa-facebook-square social-links"></i></a>
+                                <a href="https://uk.linkedin.com/in/martinkscrowley?trk=people-guest_people_search-card" target="_blank"><i class="fab fa-linkedin social-links"></i></a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
@@ -59,7 +107,7 @@
     <script src="//cdnjs.cloudflare.com/ajax/libs/jquery.matchHeight/0.7.0/jquery.matchHeight-min.js"></script>
 
     <!-- Custom JavaScript for this theme -->
-    <script src="{% static 'js/scrolling-nav.js%' %}"></script>
+    <script src="{% static 'js/scrolling-nav.js' %}"></script>
     <script src="{% static 'js/main.js' %}"></script>
 </body>
 </html>

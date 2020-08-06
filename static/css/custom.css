@@ -1,4 +1,8 @@
 /* GENERAL */
+body {
+    height: 100vh;
+}
+
 header {
     padding: 156px 0 100px;
 }
@@ -21,31 +25,95 @@ header {
     padding-right: 1rem;
 }
 
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Exo 2', sans-serif;
+}
+
+.page-header {
+    background-image: url("/static/images/tree-swing.jpg");
+    background-size: cover;
+    color: #ffffff;
+    height: 25rem;
+    padding-bottom: 1rem;
+}
+
+.header-cover {
+    height: 25rem;
+}
+
+.background-cover {
+    background-color: rgba(0, 0, 0, 0.3);
+    background-size: cover;
+    padding-bottom: 1rem;
+}
+
 /* NAVIGATION */
 .navbar{
-    background-color: rgba(255,254,240,0.45);
+    background-color: rgba(0, 0, 0, 0.5);
 }
 
 .navbar-collapse{
     text-align: right;
 }
 
+/* Help with animating the navbar-toggler was found at: http://kylegoslan.co.uk/bootstrap-4-hamburger-menu-animation/ */
 .navbar-toggler{
     margin-left: auto;
+    border: none;
+    background: transparent;
+}
+.navbar-toggler .top-bar {
+    transform: rotate(45deg);
+    transform-origin: 10% 10%;
+    background-color: #ffa522;
+}
+.navbar-toggler .middle-bar {
+    opacity: 0;
+}
+.navbar-toggler .bottom-bar {
+    transform: rotate(-45deg);
+    transform-origin: 10% 90%;
+    background-color: #ffa522;
+}
+.navbar-toggler.collapsed .top-bar {
+    transform: rotate(0);
+    background-color: #ffffff;
+
+}
+.navbar-toggler.collapsed .middle-bar {
+    opacity: 1;
+}
+.navbar-toggler.collapsed .bottom-bar {
+    transform: rotate(0);
+    background-color: #ffffff;
+}
+.navbar-toggler.collapsed:hover .icon-bar{
+    background-color: #ffa522;
 }
 
-i.fas.fa-bars{
-    color: black;
+button:focus{
+    outline: none;
+}
+
+.icon-bar {
+	width: 22px;
+	height: 2px;
+	background-color: #ffffff;
+	display: block;
+	margin-top: 4px;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
 }
-i.fas.fa-bars:focus,
-i.fas.fa-bars:hover{
+.icon-bar:focus,
+.icon-bar:hover{
     color: #ffa522;
 }
 
+.navbar-nav .nav-link{
+    padding: .5rem 1rem;
+}
 a.nav-link{
-    color: black;
+    color: #ffffff;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
     text-decoration: none;
@@ -56,4 +124,70 @@ a.nav-link:hover{
 }
 a.nav-link.active{
     color: #ffa522;
+}
+
+.smart-scroll{
+  position: fixed;
+  top: 0;
+  right: 0;
+  left: 0;
+  z-index: 1030;
+}
+.scrolled-down{
+   transform:translateY(-100%); transition: all 0.3s ease-in-out;
+}
+.scrolled-up{
+   transform:translateY(0); transition: all 0.3s ease-in-out;
+}
+
+/* Main Section */
+
+.main-section{
+    /*background-image: url("/static/images/wood-wooden-desktop-table.jpg");*/
+    background-color: #dfbb6b;
+    background-size: cover;
+}
+
+
+/* Posts */
+.post {
+    padding: 1rem 0;
+}
+
+.post-title a,
+.post-content{
+    color: white;
+}
+
+p.post-content {
+    font-family: 'Indie Flower', cursive;
+}
+
+/* Footer */
+.page-footer {
+    text-align: center;
+    background-color: rgba(0, 0, 0, 0.5);
+    padding: 0.5rem 0;
+}
+
+.social-links {
+    color: white;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+}
+.social-links:focus,
+.social-links:hover{
+    color: #ffa522;
+}
+
+/* Media Queries */
+@media screen and (min-width: 768px) {
+    .page-header {
+        height: 20rem;
+    }
+
+    .header-cover {
+        height: 20rem;
+    }
 }
