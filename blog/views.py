@@ -8,3 +8,8 @@ from blog.models import Post
 def post_list(request):
     posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')[0:3]
     return render(request, 'blog/post_list.html', {'posts': posts})
+
+
+def all_posts(request):
+    posts = Post.objects.filter(published_date__lte=timezone.now()).order_by('published_date')
+    return render(request, 'blog/all_posts.html', {'posts': posts})
