@@ -12,14 +12,14 @@
             <div class="col-12">
                 <div class="card text-center">
                     <div class="card-header">
-                        <h3 class="post-title"><a href="#">{{ post.title }}</a></h3>
+                        <h3 class="post-title"><a href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h3>
                         <p class="post-date small">
                             {{ post.published_date }}
                         </p>
                     </div>
                     <div class="card-body">
                         <p class="post-content card-text">{{ post.text|linebreaksbr }}</p>
-                        <a href="#" class="btn btn-primary">Read more...</a>
+                        <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-primary">Read more...</a>
                     </div>
                     <div class="card-footer text-muted">
                         <p class="post-stats">

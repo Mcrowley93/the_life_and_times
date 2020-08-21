@@ -8,17 +8,14 @@
                 Welcome
             </h2>
             <p class="white-text">
-                ...to the wonderful world of my everyday mediocrity! Where I write about many things, including: <br>
-                Everyday struggles <br>
-                Netflix suggestions <br>
-                Coding breakthroughs <br>
-                Game reviews <br>
-                ...and much more! <br>
-
+                ...to the wonderful world of my everyday mediocrity! Where I write about many things, ranging from my
+                everyday struggles, or a particular series on netflix that I really rate, to game reviews or a coding
+                breakthrough that I recently had. All this and much, much more! <br>
+                <br>
                 Below are my most recent posts, so please feel free to read and leave your comments!
-                However you shouldn't settle with just reading through those, also have a whole page filled with
-                previous posts that you should definitely check out! Click <a>here</a> to see every entry into my
-                E-Diary!
+                However for those of you wanting to see the other posts i've made,
+                just click <a class="text-link font-italic" href="{% url 'all_posts' %}">here</a> to see every entry
+                i've made to date!
             </p>
         </div>
     </div>
@@ -27,14 +24,14 @@
             <div class="col-12">
                 <div class="card text-center">
                     <div class="card-header">
-                        <h4 class="post-title"><a href="#">{{ post.title }}</a></h4>
+                        <h4 class="post-title"><a class="post-link" href="{% url 'post_detail' pk=post.pk %}">{{ post.title }}</a></h4>
                         <p class="post-date small">
                             {{ post.published_date }}
                         </p>
                     </div>
                     <div class="card-body">
                         <p class="post-content card-text">{{ post.text|linebreaksbr }}</p>
-                        <a href="#" class="btn btn-primary">Read more...</a>
+                        <a href="{% url 'post_detail' pk=post.pk %}" class="btn btn-primary">Read more...</a>
                     </div>
                     <div class="card-footer text-muted">
                         <p class="post-stats">
