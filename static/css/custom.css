@@ -29,8 +29,12 @@ h1, h2, h3, h4, h5, h6 {
     font-family: 'Exo 2', sans-serif;
 }
 
+.white-text {
+    color: white;
+}
+
 .page-header {
-    background-image: url("/static/images/tree-swing.jpg");
+    background-image: url("/static/images/matrix-orange.jpg");
     background-size: cover;
     color: #ffffff;
     height: 25rem;
@@ -112,18 +116,35 @@ button:focus{
 .navbar-nav .nav-link{
     padding: .5rem 1rem;
 }
-a.nav-link{
+a.nav-link,
+a.text-link,
+a.post-link{
     color: #ffffff;
     -webkit-transition: .3s ease-in-out;
     transition: .3s ease-in-out;
     text-decoration: none;
 }
+
 a.nav-link:focus,
-a.nav-link:hover{
+a.nav-link:hover,
+a.post-link:focus,
+a.post-link:hover{
     color: #ffa522;
 }
+
 a.nav-link.active{
     color: #ffa522;
+}
+
+a.text-link {
+    color: #ffa522;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+}
+a.text-link:focus,
+a.text-link:hover {
+    color: #a76400;
 }
 
 .smart-scroll{
@@ -143,8 +164,7 @@ a.nav-link.active{
 /* Main Section */
 
 .main-section{
-    /*background-image: url("/static/images/wood-wooden-desktop-table.jpg");*/
-    background-color: #dfbb6b;
+    background-color: #282828;
     background-size: cover;
 }
 
@@ -154,13 +174,24 @@ a.nav-link.active{
     padding: 1rem 0;
 }
 
-.post-title a,
-.post-content{
+.post-title,
+.post-date,
+.post-content,
+.post-stats{
     color: white;
 }
 
 p.post-content {
     font-family: 'Indie Flower', cursive;
+}
+div.card {
+    background-color: transparent;
+    border: none;
+}
+.card-header,
+.card-footer{
+    border: none;
+    background-color: transparent;
 }
 
 /* Footer */
