@@ -45,15 +45,17 @@
                             <i class="fas fa-comments"></i> Blog Entries</a>
                     {% endif %}
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#">3</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#">4</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link js-scroll-trigger" href="#">5</a>
-                </li>
+                {% if user.is_superuser %}
+                    <li class="nav-item">
+                        {% if 'post_new' in request.path %}
+                            <a class="nav-link active" href="{% url 'new_post' %}">
+                                <i class="far fa-edit"></i> New Post</a>
+                        {% else %}
+                            <a class="nav-link" href="{% url 'new_post' %}">
+                                <i class="far fa-edit"></i> New Post</a>
+                        {% endif %}
+                    </li>
+                {% endif %}
             </ul>
         </div>
     </nav>
