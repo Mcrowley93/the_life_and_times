@@ -12,6 +12,9 @@
                         <p class="post-date small">
                             {{ post.published_date }}
                         </p>
+                        {% if user == post.author %}
+                            <a class="text-link" href="{% url 'post_edit' pk=post.pk %}">Edit Post &nbsp<i class="fas fa-pencil-alt"></i></a>
+                        {% endif %}
                     </div>
                     <div class="card-body">
                         <p class="post-content card-text">{{ post.text|linebreaksbr }}</p>
@@ -30,7 +33,7 @@
                 <div class="row">
                     <div class="col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 white-text text-center">
                         <br>
-                        <a class="btn btn-primary lg-btn-sizing" href="#">Add comment</a>
+                        <a class="btn btn-custom lg-btn-sizing" href="#">Add comment</a>
                         <br>
                         <br>
                         <hr>
