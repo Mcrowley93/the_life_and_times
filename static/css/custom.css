@@ -194,6 +194,23 @@ div.card {
     background-color: transparent;
 }
 
+a.btn.btn-custom,
+button.btn.btn-custom{
+    background-color: #ffa522;
+    -webkit-transition: .3s ease-in-out;
+    transition: .3s ease-in-out;
+    text-decoration: none;
+    margin-bottom: 0.5rem;
+    color: black;
+}
+a.btn.btn-custom:focus,
+a.btn.btn-custom:hover,
+button.btn.btn-custom:focus,
+button.btn.btn-custom:hover {
+    background-color: #a76400;
+    color: white;
+}
+
 /* Footer */
 .page-footer {
     text-align: center;
