@@ -14,6 +14,9 @@
                         </p>
                         {% if user == post.author %}
                             <a class="text-link" href="{% url 'post_edit' pk=post.pk %}">Edit Post &nbsp<i class="fas fa-pencil-alt"></i></a>
+                            &nbsp
+                            <a class="text-link" href="{% url 'post_remove' pk=post.pk %}">Delete Post &nbsp<i class="far fa-trash-alt"></i></a>
+                        <br>
                         {% endif %}
                     </div>
                     <div class="card-body">
