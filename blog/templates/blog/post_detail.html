@@ -24,8 +24,7 @@
                     </div>
                     <div class="card-footer text-muted">
                         <p class="post-stats">
-                            <i class="far fa-eye"></i> 1347 &nbsp&nbsp&nbsp
-                            <i class="far fa-comment"></i> 12
+                            <i class="far fa-comment"></i> {{ post.comments.count }}
                         </p>
                     </div>
                 </div>
@@ -36,7 +35,7 @@
                 <div class="row">
                     <div class="col-12 offset-sm-1 col-sm-10 offset-md-2 col-md-8 white-text text-center">
                         <br>
-                        <a class="btn btn-custom lg-btn-sizing" href="#">Add comment</a>
+                        <a class="btn btn-custom lg-btn-sizing" href="{% url 'add_comment_to_post' pk=post.pk %}">Add comment</a>
                         <br>
                         <br>
                         <hr>
@@ -47,9 +46,6 @@
                                 <div class="post-date small">{{ comment.created_date }}</div>
                                 <p class="post-stats">{{ comment.author }}</p>
                                 <p>{{ comment.text|linebreaks }}</p>
-                                {% if request.user == comment.author %}
-                                    <a class="text-links small" href="#">DELETE</a>
-                                {% endif %}
                             </div>
                         {% empty %}
                             <p>No comments here yet!</p>
