@@ -1,4 +1,4 @@
-##The Life & Times - <br>From 1993 til TBC
+## The Life & Times - <br>From 1993 til TBC
 
 <br>
 A blog in which I talk about almost everything.
