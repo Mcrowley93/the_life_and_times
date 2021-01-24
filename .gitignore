@@ -1,3 +1,7 @@
 .idea
 venv
 __pycache__/
+*.sqlite3
+*.pyc
+env.py
+*.jpg
