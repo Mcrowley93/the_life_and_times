@@ -12,6 +12,9 @@
                         <p class="post-date small">
                             {{ post.published_date }}
                         </p>
+                        <p class="post-author">
+                            <span class="small">Written by:</span> {{  post.author }}
+                        </p>
                         {% if user == post.author %}
                             <a class="text-link" href="{% url 'post_edit' pk=post.pk %}">Edit Post &nbsp<i class="fas fa-pencil-alt"></i></a>
                             &nbsp

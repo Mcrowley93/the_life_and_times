@@ -177,7 +177,8 @@ a.text-link:hover {
 .post-title,
 .post-date,
 .post-content,
-.post-stats{
+.post-stats,
+.post-author{
     color: white;
 }
 

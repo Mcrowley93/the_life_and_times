@@ -16,6 +16,9 @@
                         <p class="post-date small">
                             {{ post.published_date }}
                         </p>
+                        <p class="post-author small">
+                            <span class="small">Written by:</span> {{  post.author }}
+                        </p>
                     </div>
                     <div class="card-body">
                         <p class="post-content card-text">{{ post.text|linebreaksbr }}</p>
